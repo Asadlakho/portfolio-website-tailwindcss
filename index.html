@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asad's tailwind website</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/b2b731f521.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--Navbar-->
+  <nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" type="button"
+                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Icon when menu is closed -->
+                    <svg class="block w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!-- Icon when menu is open -->
+                    <svg class="hidden w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex shrink-0 items-center">
+                    <img class="h-8 w-auto"
+                        src="tailwindlogo.png"
+                        alt="Your logo">
+                </div>
+                <div class="hidden sm:block sm:ml-6">
+                    <div class="flex space-x-4">
+                        <a href="#home" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                            aria-current="page">Home</a>
+                        <a href="#about"
+                            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+                        <a href="#services"
+                            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Services</a>
+                        <a href="#contact"
+                            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <button type="button"
+                    class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">View notifications</span>
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                    </svg>
+                </button>
+
+                <!-- Profile dropdown -->
+                <div class="relative ml-3">
+                    <div>
+                        <button type="button"
+                            class="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden cursor-pointer"
+                            id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                            <span class="absolute -inset-1.5"></span>
+                            <span class="sr-only">Open user menu</span>
+                            <img class="w-8 h-9 rounded-full"
+                                src="Pastport.png"
+                                alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state -->
+    <div class="sm:hidden" id="mobile-menu" class="hidden">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+            <a href="#home" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                aria-current="page">Home</a>
+            <a href="#about"
+                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+            <a href="#services"
+                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Services</a>
+            <a href="#contact"
+                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 " id="home">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+        alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center">
+    <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+        aria-hidden="true">
+        <div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
+    <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+        aria-hidden="true">
+        <div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+            <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Work with Asad</h2>
+            <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">I'm a skilled web developer, crafting dynamic and responsive websites using the latest technologies.
+            </p>
+        </div>
+        <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+            <div
+                class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+                <a href="#">Open pages <span aria-hidden="true">&rarr;</span></a>
+                <a href="#">Developer asad <span aria-hidden="true">&rarr;</span></a>
+                <a href="#">Our values <span aria-hidden="true">&rarr;</span></a>
+                <a href="#">Meet with asad <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="flex flex-col-reverse gap-1">
+                    <dt class="text-base/7 text-gray-300">Experience</dt>
+                    <dd class="text-4xl font-semibold tracking-tight text-white">3years+</dd>
+                </div>
+                <div class="flex flex-col-reverse gap-1">
+                    <dt class="text-base/7 text-gray-300">Projects</dt>
+                    <dd class="text-4xl font-semibold tracking-tight text-white">50+</dd>
+                </div>
+                <div class="flex flex-col-reverse gap-1">
+                    <dt class="text-base/7 text-gray-300">Hours per week</dt>
+                    <dd class="text-4xl font-semibold tracking-tight text-white">40</dd>
+                </div>
+                <div class="flex flex-col-reverse gap-1">
+                    <dt class="text-base/7 text-gray-300">Paid time off</dt>
+                    <dd class="text-4xl font-semibold tracking-tight text-white">Unlimited</dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+</div>
+
+
+<section class="py-16 bg-gray-900">
+    <div class="container mx-auto px-6 md:px-14">
+        <div class="flex flex-col-reverse md:flex-row items-center">
+            <!-- Text Section -->
+            <div class="md:w-1/2 text-white md:pl-12 mb-12 md:mb-0 cursor-pointer">
+                <h2 class="text-4xl font-bold mb-4 mt-2" id="about">About Me</h2>
+                <p class="text-gray-400 text-lg mb-7">
+                    We are a team of passionate individuals dedicated to delivering the best user experience through
+                    innovation and creativity. Our goal is to empower businesses with robust and scalable solutions.
+                </p>
+                <p class="text-gray-400 text-lg mb-6">
+                    Our focus is on understanding your needs and translating them into functional, beautiful designs.
+                    Whether you are a startup or an established brand, we tailor our solutions to your unique
+                    requirements.
+                </p>
+                <a href="#"
+                    class="inline-block bg-indigo-600 text-white py-2 px-6 rounded-lg text-lg font-medium hover:bg-indigo-700 transition duration-300">Learn
+                    More</a>
+            </div>
+
+            <!-- Image Section -->
+            <div class="md:w-1/2">
+                <img src="coder.png" alt="About Us"
+                    class="w-full h-auto rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Cards-->
+<!--Services-->
+<section class="py-16 bg-gray-900">
+    <div class="container mx-auto px-6 md:px-12">
+        <h2 class="text-4xl font-bold text-center text-white mb-14" id="services">Our Services</h2>
+
+        <!-- Card Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 cursor-pointer">
+            <!-- Card 1 -->
+            <div
+                class="bg-black border border-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+                <img class="w-full h-56 object-cover" src="card1.jpg" alt="Card Image 1">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Web Design & Development</h3>
+                    <p class="text-gray-400 mb-6">We design and develop beautiful, high-performance websites that drive
+                        business growth.</p>
+                    <div class="flex justify-between">
+                        <a href="#"
+                            class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition">Open
+                            Now</a>
+                        <a href="#"
+                            class="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-black border border-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+                <img class="w-full h-56 object-cover" src="card2.jpg" alt="Card Image 2">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Mobile App Development</h3>
+                    <p class="text-gray-400 mb-6">We build mobile applications that offer exceptional user experiences
+                        and high functionality.</p>
+                    <div class="flex justify-between">
+                        <a href="#"
+                            class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition">Open
+                            Now</a>
+                        <a href="#"
+                            class="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-black border border-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+                <img class="w-full h-56 object-cover" src="card3.jpg" alt="Card Image 3">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">SEO & Digital Marketing</h3>
+                    <p class="text-gray-400 mb-6">Boost your online visibility with our SEO and digital marketing
+                        strategies that convert visitors into customers.</p>
+                    <div class="flex justify-between">
+                        <a href="#"
+                            class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition">Open
+                            Now</a>
+                        <a href="#"
+                            class="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+                class="bg-black border border-gray-700 rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
+                <img class="w-full h-56 object-cover" src="card4.jpg" alt="Card Image 4">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Brand Strategy & Consulting</h3>
+                    <p class="text-gray-400 mb-6">Our expert consultants help you define and refine your brand strategy
+                        for sustainable success.</p>
+                    <div class="flex justify-between">
+                        <a href="#"
+                            class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition">Open
+                            Now</a>
+                        <a href="#"
+                            class="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-16 bg-gray-900">
+    <div class="container mx-auto px-6 md:px-12 cursor-pointer">
+        <h2 class="text-4xl font-bold text-center text-white mb-12">What Our Clients Say</h2>
+
+        <!-- Testimonial Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div
+                class="bg-black border border-gray-700 rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <img class="w-12 h-12 rounded-full mr-4" src="card1.jpg" alt="Client Image 1">
+                    <div>
+                        <h4 class="text-lg font-semibold text-white">John Doe</h4>
+                        <p class="text-gray-400">CEO, Company Name</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">"The services we received were top-notch. Our website's performance and
+                    design are amazing, and it has really helped our business grow!"</p>
+                <div class="flex justify-start">
+                    <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span class="ml-2 text-indigo-600 font-medium">Read More</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+                class="bg-black border border-gray-700 rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <img class="w-12 h-12 rounded-full mr-4" src="client 2.jpg" alt="Client Image 2">
+                    <div>
+                        <h4 class="text-lg font-semibold text-white">Jane Smith</h4>
+                        <p class="text-gray-400">Founder, Another Company</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">"Absolutely outstanding! The design team really understood our needs, and
+                    the development team delivered a fully functional website. We couldn't be happier."</p>
+                <div class="flex justify-start">
+                    <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span class="ml-2 text-indigo-600 font-medium">Read More</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div
+                class="bg-black border border-gray-700 rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <img class="w-12 h-12 rounded-full mr-4" src="client 3.jpg" alt="Client Image 3">
+                    <div>
+                        <h4 class="text-lg font-semibold text-white">Mark Johnson</h4>
+                        <p class="text-gray-400">Marketing Director, Business Co.</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">"We saw a tremendous improvement in our online presence and engagement
+                    thanks to the fantastic team. The entire process was seamless and efficient!"</p>
+                <div class="flex justify-start">
+                    <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span class="ml-2 text-indigo-600 font-medium">Read More</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div
+                class="bg-black border border-gray-700 rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <img class="w-12 h-12 rounded-full mr-4" src="client 2.jpg" alt="Client Image 4">
+                    <div>
+                        <h4 class="text-lg font-semibold text-white">Emily Davis</h4>
+                        <p class="text-gray-400">Product Manager, Tech Solutions</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">"The team at the company was very professional and helpful. The end
+                    product exceeded our expectations. We highly recommend them!"</p>
+                <div class="flex justify-start">
+                    <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span class="ml-2 text-indigo-600 font-medium">Read More</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div
+                class="bg-black border border-gray-700 rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <img class="w-12 h-12 rounded-full mr-4" src="client 1.jpg" alt="Client Image 5">
+                    <div>
+                        <h4 class="text-lg font-semibold text-white">Sarah Lee</h4>
+                        <p class="text-gray-400">Owner, Digital Agency</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">"Working with this team was an absolute pleasure. The level of creativity
+                    and dedication shown was unmatched. Thank you for an outstanding experience!"</p>
+                <div class="flex justify-start">
+                    <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span class="ml-2 text-indigo-600 font-medium">Read More</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div
+                class="bg-black border border-gray-700 rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <img class="w-12 h-12 rounded-full mr-4" src="client 4.jpg" alt="Client Image 6">
+                    <div>
+                        <h4 class="text-lg font-semibold text-white">Chris Miller</h4>
+                        <p class="text-gray-400">Founder, Creative Studio</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">"The website they built for us is stunning and incredibly functional. They
+                    delivered exactly what we needed. I highly recommend them for any project!"</p>
+                <div class="flex justify-start">
+                    <svg class="w-6 h-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span class="ml-2 text-indigo-600 font-medium">Read More</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-gray-800 py-16">
+    <div class="container mx-auto px-6 md:px-12">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-white mb-4 " id="contact">Contact Me</h2>
+            <p class="text-lg text-gray-400">I’d love to hear from you! Whether you have a question, <span class="text-fuchsia-800"> a project idea, or
+                just want to chat, </span> feel free to reach out!</p>
+        </div>
+
+        <!-- Contact Form and Info (Two Equal Columns) -->
+        <div class="flex flex-col md:flex-row justify-between gap-8">
+            <!-- Left Side (Text & Info) -->
+            <div class="w-full md:w-1/2 text-white">
+                <h3 class="text-3xl font-semibold mb-4">Get In Touch</h3>
+                <p class="text-gray-400 mb-6">Feel free to drop a message or reach out to me through any of the social
+                    channels. I'll be happy to respond to your inquiries!</p>
+
+                <!-- Social Links -->
+                <div class="flex space-x-6">
+                    <a href="https://github.com/yourusername" class="text-white hover:text-gray-400" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa-brands fa-github fa-lg" style="color: #24a0ff;font-size: 30px;"></i>
+                    </a>
+
+                    <a href="https://linkedin.com/in/yourusername" class="text-white hover:text-gray-400"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin fa-lg" style="color: #2ea4ff; font-size: 30px;"></i>
+                    </a>
+
+                    <a href="https://twitter.com/yourusername" class="text-white hover:text-gray-400" target="_blank"
+                        rel="noopener noreferrer">
+                    <i class="fa-brands fa-square-twitter fa-lg" style="color: #2474ff; font-size:30px;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side (Form) -->
+            <div class="w-full md:w-1/2">
+                <form class="bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <div class="mb-4">
+                        <label for="name" class="block text-white text-lg mb-2">Your Name</label>
+                        <input type="text" id="name"
+                            class="w-full px-4 py-2 bg-gray-800 text-white border border-gray-600 rounded-lg"
+                            placeholder="Enter your name" required />
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-white text-lg mb-2">Your Email</label>
+                        <input type="email" id="email"
+                            class="w-full px-4 py-2 bg-gray-800 text-white border border-gray-600 rounded-lg"
+                            placeholder="Enter your email" required />
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-white text-lg mb-2">Your Message</label>
+                        <textarea id="message"
+                            class="w-full px-4 py-2 bg-gray-800 text-white border border-gray-600 rounded-lg"
+                            placeholder="Enter your message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 cursor-pointer">Send
+                        Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+            <!-- Left Section (Contact Info) -->
+            <div class="text-center sm:text-left">
+                <h3 class="text-2xl font-bold text-white">Web Developer Asad!</h3>
+                <p class="text-gray-400 mt-2">Feel free to reach out through the following channels or follow me on my
+                    social media platforms.</p>
+
+                <div class="mt-4">
+                    <p class="text-gray-400"><i class="fa-solid fa-location-dot fa-lg" style="color: #8e4593;"></i> Location:Hyderabad,Pakistan</p>
+                    <p class="text-gray-400"><i class="fa-regular fa-envelope fa-lg" style="color: #964d97;"></i> Email: asadlakho503@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Middle Section (Quick Links) -->
+            <div class="text-center sm:text-left">
+                <h4 class="text-lg font-semibold text-white">Quick Links</h4>
+                <ul class="mt-2 space-y-2">
+                    <li><a href="#home" class="text-gray-400 hover:text-blue-400">Home</a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-blue-400">About</a></li>
+                    <li><a href="#services" class="text-gray-400 hover:text-blue-400">Services</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-blue-400">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Section (Social Media Icons) -->
+            <div class="text-center sm:text-left">
+                <h4 class="text-lg font-semibold text-white">Follow Me</h4>
+                <div class="flex justify-center sm:justify-start space-x-6 mt-2">
+                    <!-- GitHub Icon -->
+                    <a href="https://github.com/yourusername" class="text-gray-400 hover:text-blue-500" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa-brands fa-github fa-lg" style="color: #24a0ff;font-size: 17px;"></i>
+                    </a>
+
+                    <!-- LinkedIn Icon -->
+                    <a href="https://linkedin.com/in/yourusername" class="text-gray-400 hover:text-blue-600"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin fa-lg" style="color: #2ea4ff; font-size: 17px;"></i>
+                    </a>
+
+                    <!-- Twitter Icon -->
+                    <a href="https://twitter.com/yourusername" class="text-gray-400 hover:text-blue-400" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa-brands fa-square-twitter fa-lg" style="color: #2474ff; font-size:17px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="text-center text-gray-400 mt-8">
+            <p>@ 2025 My website. Developer Asad.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="website.js"></script>
+
+</html>
